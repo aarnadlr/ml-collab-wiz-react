@@ -65,13 +65,13 @@ function App() {
     // });
 
     if (selectedItem === '2') {
-      gsap.to('.show', {delay:.5, duration: 1, ease: 'power2.inOut', x: -192 });
+      gsap.to('.show', {delay:.75, duration: 1, ease: 'power2.inOut', x: -192 });
     }
     if (selectedItem === '3') {
-      gsap.to('.show', {delay:.5, duration: 1, ease: 'power2.inOut', x: -390 });
+      gsap.to('.show', {delay:.75, duration: 1.25, ease: 'power2.inOut', x: -390 });
     }
     if (selectedItem === '4') {
-      gsap.to('.show', {delay:.5, duration: 1, ease: 'power2.inOut', x: -586 });
+      gsap.to('.show', {delay:.75, duration: 1.5, ease: 'power2.inOut', x: -586 });
     }
   }, [selectedItem]);
 

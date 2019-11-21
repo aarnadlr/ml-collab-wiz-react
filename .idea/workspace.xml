@@ -3,12 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="dbccb3b9-ea78-4e5b-868b-1c6700341c66" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CircleWithLabel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CircleWithLabel.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -80,7 +76,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1574281877477</updated>
-      <workItem from="1574281880140" duration="16248000" />
+      <workItem from="1574281880140" duration="16490000" />
     </task>
     <task id="LOCAL-00001" summary="Add state change">
       <created>1574300975818</created>
@@ -96,7 +92,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574303124917</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add translate movement to left for each circle">
+      <created>1574305597921</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1574305597921</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -116,6 +119,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add state change" />
     <MESSAGE value="Add slow fade on click" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add slow fade on click" />
+    <MESSAGE value="Add translate movement to right for each circle" />
+    <MESSAGE value="Add translate movement to left for each circle" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add translate movement to left for each circle" />
   </component>
 </project>
