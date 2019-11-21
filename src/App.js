@@ -3,8 +3,7 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import CircleWithLabel from './components/CircleWithLabel';
 
-import {CSSTransition, TransitionGroup} from 'react-transition-group';
-import posed from 'react-pose';
+// import posed from 'react-pose';
 
 import { ReactComponent as ArrowPage } from './svgs/arrowpage.svg';
 import { ReactComponent as Meeting } from './svgs/meeting.svg';
@@ -28,6 +27,13 @@ function App() {
     //   typeof e.currentTarget.id
     // );
 
+    setSelectedItem(id);
+
+    // setIsVisible({
+    //   ...isVisible,
+    //   [id]: !isVisible,
+    // });
+
     setIsVisible({
       '1': false,
       '2': false,
@@ -35,19 +41,17 @@ function App() {
       '4': false
     });
 
-    setSelectedItem(id);
-
     // console.log('selectedItem: ', selectedItem)
   }
 
   useEffect(() => {
-    console.log('selectedItem: ', selectedItem);
+    // console.log('selectedItem: ', selectedItem);
 
     setIsVisible({
       ...isVisible,
       [selectedItem]: true
     });
-  },[selectedItem]);
+  }, [selectedItem]);
 
   return (
     <main style={{ display: 'flex' }}>

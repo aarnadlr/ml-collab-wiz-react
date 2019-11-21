@@ -1,16 +1,18 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
+// import {CSSTransition, TransitionGroup} from 'react-transition-group';
 
 const Container = styled.div`
-  display: ${ props => props.isVisible ? "flex" : "none"};
+  display: flex;
   flex-direction: column;
   width: 136px;
   margin: 0 60px 0 0;
   text-align: center;
+  transition: all .8s ease;
   &:hover .circle {
     border: 10px solid #5f259f;
   }
-  
+
   &:hover .label {
     color: #5f259f;
   }
@@ -36,16 +38,22 @@ const Label = styled.p`
   margin: 16px 0 0 0;
 `;
 
-const CircleWithLabel = (props) => {
+const CircleWithLabel = props => {
+  // useEffect(()=>{
+  // 	console.log('CHANGED')
+  // }, [props.isSelected]);
 
-	// useEffect(()=>{
-	// 	console.log('CHANGED')
-	// }, [props.isSelected]);
   return (
-    <Container id={props.id} isSelected={props.isSelected} isVisible={props.isVisible}  onClick={(e)=>props.handleSelect(e)}>
-      <Circle  className={'circle'}>{props.icon}</Circle>
-      <Label className={'label'}>{props.labelText}</Label>
-    </Container>
+      <Container
+        className={`${ props.isVisible ?'show':'hidden'}`}
+        id={props.id}
+        selectedItem={props.selectedItem}
+        isVisible={props.isVisible}
+        onClick={e => props.handleSelect(e)}
+      >
+        <Circle className={'circle'}>{props.icon}</Circle>
+        <Label className={'label'}>{props.labelText}</Label>
+      </Container>
   );
 };
 
