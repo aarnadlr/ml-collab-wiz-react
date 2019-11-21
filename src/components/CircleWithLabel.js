@@ -1,10 +1,8 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
-  // display: inline-block;
-  // border: 1px solid gold;
-  display: flex;
+  display: ${ props => props.isVisible ? "flex" : "none"};
   flex-direction: column;
   width: 136px;
   margin: 0 60px 0 0;
@@ -29,12 +27,6 @@ const Circle = styled.div`
   align-items: center;
   transition: all 0.25s ease;
   border: 10px solid transparent;
-  // &:hover {
-  //   border: 10px solid #5f259f;
-  // }
-  // &:hover + .label {
-  //   color: #5f259f;
-  // }
 `;
 
 const Label = styled.p`
@@ -44,11 +36,15 @@ const Label = styled.p`
   margin: 16px 0 0 0;
 `;
 
-const CircleWithLabel = ({ icon, labelText }) => {
+const CircleWithLabel = (props) => {
+
+	// useEffect(()=>{
+	// 	console.log('CHANGED')
+	// }, [props.isSelected]);
   return (
-    <Container>
-      <Circle className={'circle'}>{icon}</Circle>
-      <Label className={'label'}>{labelText}</Label>
+    <Container id={props.id} isSelected={props.isSelected} isVisible={props.isVisible}  onClick={(e)=>props.handleSelect(e)}>
+      <Circle  className={'circle'}>{props.icon}</Circle>
+      <Label className={'label'}>{props.labelText}</Label>
     </Container>
   );
 };
