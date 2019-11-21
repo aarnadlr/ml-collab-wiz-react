@@ -3,7 +3,16 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import CircleWithLabel from './components/CircleWithLabel';
 
+// import {
+//   Tween,
+//   Timeline,
+//   SplitWords,
+//   SplitLetters,
+//   Controls
+// } from 'react-gsap';
+
 // import posed from 'react-pose';
+import gsap from 'gsap';
 
 import { ReactComponent as ArrowPage } from './svgs/arrowpage.svg';
 import { ReactComponent as Meeting } from './svgs/meeting.svg';
@@ -20,37 +29,50 @@ function App() {
   });
 
   function handleSelect(e, id) {
-    // console.log('id: ', id, typeof id);
-    // console.log(
-    //   'e.currentTarget.id: ',
-    //   e.currentTarget.id,
-    //   typeof e.currentTarget.id
-    // );
-
     setSelectedItem(id);
-
-    // setIsVisible({
-    //   ...isVisible,
-    //   [id]: !isVisible,
-    // });
 
     setIsVisible({
       '1': false,
       '2': false,
       '3': false,
-      '4': false
+      '4': false,
+      [id]: true
     });
 
-    // console.log('selectedItem: ', selectedItem)
+    // setIsVisible({
+    //   ...isVisible,
+    //   [selectedItem]: true
+    // });
   }
 
-  useEffect(() => {
-    // console.log('selectedItem: ', selectedItem);
+  // useEffect(() => {
+  //   setIsVisible({
+  //     ...isVisible,
+  //     [selectedItem]: true
+  //   });
+  //
+  //   // if (selectedItem === '2') {
+  //   //   gsap.to('.show', { duration: 1, x: 100 });
+  //   //   // gsap.to('.box', { duration: 2, x: 300 });
+  //   //   // gsap.to('.green', { duration: 3, rotation: 360, scale: 0.5 });
+  //   // }
+  // }, [selectedItem]);
 
-    setIsVisible({
-      ...isVisible,
-      [selectedItem]: true
-    });
+  useEffect(() => {
+    // setIsVisible({
+    //   ...isVisible,
+    //   [selectedItem]: true
+    // });
+
+    if (selectedItem === '2') {
+      gsap.to('.show', {delay:.5, duration: 1, ease: 'power2.inOut', x: -192 });
+    }
+    if (selectedItem === '3') {
+      gsap.to('.show', {delay:.5, duration: 1, ease: 'power2.inOut', x: -390 });
+    }
+    if (selectedItem === '4') {
+      gsap.to('.show', {delay:.5, duration: 1, ease: 'power2.inOut', x: -586 });
+    }
   }, [selectedItem]);
 
   return (

@@ -8,7 +8,7 @@ const Container = styled.div`
   width: 136px;
   margin: 0 60px 0 0;
   text-align: center;
-  transition: all .8s ease;
+  // transition: all .8s ease;
   &:hover .circle {
     border: 10px solid #5f259f;
   }
@@ -27,12 +27,12 @@ const Circle = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all 0.25s ease;
+  // transition: all 0.25s ease;
   border: 10px solid transparent;
 `;
 
 const Label = styled.p`
-  transition: all 0.25s ease;
+  // transition: all 0.25s ease;
   font-weight: bold;
   color: #0090da;
   margin: 16px 0 0 0;
