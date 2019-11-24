@@ -33,6 +33,15 @@ p {
   opacity:1;
   /*transition: all .8s ease;*/
 }
+.purpleBorder.purpleBorder{
+    border: 10px solid #5f259f;
+}
+.purpleText.purpleText{
+    color: #5f259f;
+}
+.opacity30{
+    opacity:.3;
+}
 
 /*.my-node-enter {*/
 /*  opacity: 0;*/

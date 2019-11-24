@@ -6,7 +6,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   width: 136px;
-  margin: 0 60px 0 0;
+  margin: 0 40px 0 0;
   text-align: center;
   // transition: all .8s ease;
   &:hover .circle {
@@ -45,14 +45,14 @@ const CircleWithLabel = props => {
 
   return (
       <Container
-        className={`${ props.isVisible ?'show':'hidden'}`}
+        className={`${ props.isVisible ?'show':'hidden'} ${ props.opacity30 ?'opacity30':'null'} `}
         id={props.id}
         selectedItem={props.selectedItem}
         isVisible={props.isVisible}
         onClick={e => props.handleSelect(e)}
       >
-        <Circle className={'circle'}>{props.icon}</Circle>
-        <Label className={'label'}>{props.labelText}</Label>
+        <Circle className={ `circle ${ props.purpleBorder ?'purpleBorder':'null2'}`}>{props.icon}</Circle>
+        <Label className={`label ${ props.purpleBorder ?'purpleText':'null2'}`}>{props.labelText}</Label>
       </Container>
   );
 };

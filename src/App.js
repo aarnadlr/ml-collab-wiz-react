@@ -12,7 +12,7 @@ import {
   withRouter
 } from 'react-router-dom';
 
-import {useTimeout} from 'react-use-timeout';
+import { useTimeout } from 'react-use-timeout';
 
 import { ReactComponent as ArrowPage } from './svgs/arrowpage.svg';
 import { ReactComponent as Meeting } from './svgs/meeting.svg';
@@ -22,21 +22,24 @@ import Home from './components/Home';
 import PhaseTwo from './components/PhaseTwo';
 
 function App(props) {
-
   // const propsRef = useRef(props);
   const [selectedItem, setSelectedItem] = useState(null);
 
-  const callPush = useCallback(()=>{
-    props.history.push('/phaseTwo')
+  const callPush = useCallback(() => {
+    props.history.push('/phaseTwo');
   });
 
-  const timeout = useTimeout(callPush, 3000)
+  const timeout = useTimeout(callPush, 3000);
 
   const [isVisible, setIsVisible] = useState({
     '1': true,
     '2': true,
     '3': true,
-    '4': true
+    '4': true,
+    '5': true,
+    '6': true,
+    '7': true,
+    '8': true
   });
 
   function handleSelect(e, id) {
@@ -47,6 +50,10 @@ function App(props) {
       '2': false,
       '3': false,
       '4': false,
+      '5': true,
+      '6': true,
+      '7': true,
+      '8': true,
       [id]: true
     });
   }
@@ -57,7 +64,7 @@ function App(props) {
         delay: 0.75,
         duration: 1,
         ease: 'power2.inOut',
-        x: -192
+        x: -176
       });
     }
     if (selectedItem === '3') {
@@ -77,14 +84,13 @@ function App(props) {
       });
     }
 
-    if(isVisible['1']===false || isVisible['2']===false){
-
+    if (isVisible['1'] === false || isVisible['2'] === false) {
       // setTimeout(
       //   propsRef.current.history.push('/phaseTwo'),
       //   3000
       // )
 
-      timeout.start()
+      timeout.start();
     }
   }, [selectedItem]);
 
@@ -94,55 +100,97 @@ function App(props) {
 
   return (
     <>
-
       <Switch>
-
         <Route exact path="/phaseTwo">
           <PhaseTwo>
-            <p>This is PHASE TWO </p>
+            <main style={{ display: 'flex', padding: '16px' }}>
+              <CircleWithLabel
+                purpleBorder={true}
+                opacity30={true}
+                isVisible={isVisible['5']}
+                id={'1'}
+                handleSelect={e => handleSelect(e, '1')}
+                selectedItem={selectedItem === '1'}
+                icon={<Meeting />}
+                labelText={'SHARING FILES'}
+              />
+              <div style={{width:'60px'}}></div>
+              <CircleWithLabel
+                isVisible={isVisible['6']}
+                id={'2'}
+                handleSelect={e => handleSelect(e, '2')}
+                selectedItem={selectedItem === '2'}
+                icon={<Meeting />}
+                labelText={'MYSELF'}
+              />
+              <CircleWithLabel
+                isVisible={isVisible['7']}
+                id={'3'}
+                handleSelect={e => handleSelect(e, '3')}
+                selectedItem={selectedItem === '3'}
+                icon={<People />}
+                labelText={'MY TEAM'}
+              />
+              <CircleWithLabel
+                isVisible={isVisible['8']}
+                id={'4'}
+                handleSelect={e => handleSelect(e, '4')}
+                selectedItem={selectedItem === '4'}
+                icon={<Shapes />}
+                labelText={'EXTERNAL PARTNERS'}
+              />
+
+              <CircleWithLabel
+                isVisible={isVisible['8']}
+                id={'4'}
+                handleSelect={e => handleSelect(e, '4')}
+                selectedItem={selectedItem === '4'}
+                icon={<Shapes />}
+                labelText={'THE COMPANY'}
+              />
+            </main>
           </PhaseTwo>
         </Route>
 
         <Route exact path="/">
-               <Home>
-      <main style={{ display: 'flex', padding: '16px' }}>
-        <CircleWithLabel
-          isVisible={isVisible['1']}
-          id={'1'}
-          handleSelect={e => handleSelect(e, '1')}
-          selectedItem={selectedItem === '1'}
-          icon={<ArrowPage />}
-          labelText={'CREATE AND SAVE'}
-        />
-        <CircleWithLabel
-          isVisible={isVisible['2']}
-          id={'2'}
-          handleSelect={e => handleSelect(e, '2')}
-          selectedItem={selectedItem === '2'}
-          icon={<Meeting />}
-          labelText={'SHARING FILES'}
-        />
-        <CircleWithLabel
-          isVisible={isVisible['3']}
-          id={'3'}
-          handleSelect={e => handleSelect(e, '3')}
-          selectedItem={selectedItem === '3'}
-          icon={<People />}
-          labelText={'INTERACTING AND MEETING'}
-        />
-        <CircleWithLabel
-          isVisible={isVisible['4']}
-          id={'4'}
-          handleSelect={e => handleSelect(e, '4')}
-          selectedItem={selectedItem === '4'}
-          icon={<Shapes />}
-          labelText={'ORGANIZING'}
-        />
-      </main>
-</Home>
+          <Home>
+            <main style={{ display: 'flex', padding: '16px' }}>
+              <CircleWithLabel
+                isVisible={isVisible['1']}
+                id={'1'}
+                handleSelect={e => handleSelect(e, '1')}
+                selectedItem={selectedItem === '1'}
+                icon={<ArrowPage />}
+                labelText={'CREATE AND SAVE'}
+              />
+              <CircleWithLabel
+                isVisible={isVisible['2']}
+                id={'2'}
+                purpleBorder={selectedItem === '2'}
+                handleSelect={e => handleSelect(e, '2')}
+                selectedItem={selectedItem === '2'}
+                icon={<Meeting />}
+                labelText={'SHARING FILES'}
+              />
+              <CircleWithLabel
+                isVisible={isVisible['3']}
+                id={'3'}
+                handleSelect={e => handleSelect(e, '3')}
+                selectedItem={selectedItem === '3'}
+                icon={<People />}
+                labelText={'INTERACTING AND MEETING'}
+              />
+              <CircleWithLabel
+                isVisible={isVisible['4']}
+                id={'4'}
+                handleSelect={e => handleSelect(e, '4')}
+                selectedItem={selectedItem === '4'}
+                icon={<Shapes />}
+                labelText={'ORGANIZING'}
+              />
+            </main>
+          </Home>
         </Route>
-
-
       </Switch>
     </>
   );
