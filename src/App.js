@@ -146,8 +146,8 @@ function App(props) {
                 id={'4'}
                 handleSelect={e => handleSelect(e, '4')}
                 selectedItem={selectedItem === '4'}
-                icon={<External />}
-                labelText={'EXTERNAL PARTNERS'}
+                icon={<TheCompany />}
+                labelText={'EXTERNAL PARTNER'}
               />
 
               <CircleWithLabel
@@ -156,7 +156,7 @@ function App(props) {
                 id={'4'}
                 handleSelect={e => handleSelect(e, '4')}
                 selectedItem={selectedItem === '4'}
-                icon={<TheCompany />}
+                icon={<External />}
                 labelText={'THE COMPANY'}
               />
             </main>

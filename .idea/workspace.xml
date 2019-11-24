@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dbccb3b9-ea78-4e5b-868b-1c6700341c66" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CircleWithLabel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CircleWithLabel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/svgs/meeting.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/svgs/meeting.svg" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -80,7 +76,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1574281877477</updated>
-      <workItem from="1574281880140" duration="23363000" />
+      <workItem from="1574281880140" duration="23598000" />
     </task>
     <task id="LOCAL-00001" summary="Add state change">
       <created>1574300975818</created>
@@ -124,7 +120,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574564247563</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Completed transition to phaseTwo options.">
+      <created>1574565383090</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1574565383091</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,6 +152,7 @@
     <MESSAGE value="Add nice fade in addition to the translate movement to left." />
     <MESSAGE value="Add react-router. Now, we push to the phaseTwo route after the first selection has been made." />
     <MESSAGE value="Add transition to phaseTwo." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add transition to phaseTwo." />
+    <MESSAGE value="Completed transition to phaseTwo options." />
+    <option name="LAST_COMMIT_MESSAGE" value="Completed transition to phaseTwo options." />
   </component>
 </project>
