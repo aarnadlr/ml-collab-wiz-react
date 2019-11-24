@@ -90,6 +90,15 @@ function App(props) {
       });
     }
 
+    if (selectedItem === '7') {
+      gsap.to('.show', {
+        delay: 0.75,
+        duration: 1.5,
+        ease: 'power2.inOut',
+        x: -586
+      });
+    }
+
     if (isVisible['1'] === false || isVisible['2'] === false) {
       // setTimeout(
       //   propsRef.current.history.push('/phaseTwo'),
@@ -116,26 +125,32 @@ function App(props) {
                 opacity30={true}
                 isVisible={isVisible['5']}
                 id={'1'}
-                handleSelect={e => handleSelect(e, '1')}
+                // handleSelect={e => handleSelect(e, '1')}
+                handleSelect={()=>null}
                 selectedItem={selectedItem === '1'}
-                icon={<Meeting />}
+                icon={<People />}
                 labelText={'SHARING FILES'}
               />
               <div style={{width:'60px'}}></div>
+
               <CircleWithLabel
                 fadein={true}
                 isVisible={isVisible['6']}
                 id={'2'}
-                handleSelect={e => handleSelect(e, '2')}
+                // handleSelect={e => handleSelect(e, '2')}
+                handleSelect={()=>null}
                 selectedItem={selectedItem === '2'}
                 icon={<Myself />}
                 labelText={'MYSELF'}
               />
+
+              {/*SECOND OPTION IN PHASETWO*/}
               <CircleWithLabel
                 fadein={true}
                 isVisible={isVisible['7']}
                 id={'3'}
-                handleSelect={e => handleSelect(e, '3')}
+                // handleSelect={e => handleSelect(e, '3')}
+                handleSelect={()=>null}
                 selectedItem={selectedItem === '3'}
                 icon={<MyTeam />}
                 labelText={'MY TEAM'}
@@ -144,7 +159,8 @@ function App(props) {
                 fadein={true}
                 isVisible={isVisible['8']}
                 id={'4'}
-                handleSelect={e => handleSelect(e, '4')}
+                // handleSelect={e => handleSelect(e, '4')}
+                handleSelect={()=>null}
                 selectedItem={selectedItem === '4'}
                 icon={<TheCompany />}
                 labelText={'EXTERNAL PARTNER'}
@@ -154,7 +170,8 @@ function App(props) {
                 fadein={true}
                 isVisible={isVisible['8']}
                 id={'4'}
-                handleSelect={e => handleSelect(e, '4')}
+                // handleSelect={e => handleSelect(e, '4')}
+                handleSelect={()=>null}
                 selectedItem={selectedItem === '4'}
                 icon={<External />}
                 labelText={'THE COMPANY'}
@@ -180,7 +197,7 @@ function App(props) {
                 purpleBorder={selectedItem === '2'}
                 handleSelect={e => handleSelect(e, '2')}
                 selectedItem={selectedItem === '2'}
-                icon={<Meeting />}
+                icon={<People />}
                 labelText={'SHARING FILES'}
               />
               <CircleWithLabel
@@ -188,7 +205,7 @@ function App(props) {
                 id={'3'}
                 handleSelect={e => handleSelect(e, '3')}
                 selectedItem={selectedItem === '3'}
-                icon={<People />}
+                icon={<Meeting />}
                 labelText={'INTERACTING AND MEETING'}
               />
               <CircleWithLabel
