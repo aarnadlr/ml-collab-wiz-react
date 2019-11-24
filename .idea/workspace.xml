@@ -6,6 +6,7 @@
       <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/CircleWithLabel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CircleWithLabel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/svgs/meeting.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/svgs/meeting.svg" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -79,7 +80,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1574281877477</updated>
-      <workItem from="1574281880140" duration="22341000" />
+      <workItem from="1574281880140" duration="23363000" />
     </task>
     <task id="LOCAL-00001" summary="Add state change">
       <created>1574300975818</created>
@@ -116,7 +117,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574542679928</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Add transition to phaseTwo.">
+      <created>1574564247563</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1574564247563</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,6 +148,7 @@
     <MESSAGE value="Add translate movement to left for each circle" />
     <MESSAGE value="Add nice fade in addition to the translate movement to left." />
     <MESSAGE value="Add react-router. Now, we push to the phaseTwo route after the first selection has been made." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add react-router. Now, we push to the phaseTwo route after the first selection has been made." />
+    <MESSAGE value="Add transition to phaseTwo." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add transition to phaseTwo." />
   </component>
 </project>

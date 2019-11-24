@@ -45,7 +45,7 @@ const CircleWithLabel = props => {
 
   return (
       <Container
-        className={`${ props.isVisible ?'show':'hidden'} ${ props.opacity30 ?'opacity30':'null'} `}
+        className={`${ props.isVisible ?'show':'hidden'} ${ props.opacity30 ?'opacity30':'null'} ${ props.fadein ?'fadein':'null'} ${ props.fadeOutOpacity ?'fadeOutOpacity':'null'} `}
         id={props.id}
         selectedItem={props.selectedItem}
         isVisible={props.isVisible}

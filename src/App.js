@@ -18,6 +18,12 @@ import { ReactComponent as ArrowPage } from './svgs/arrowpage.svg';
 import { ReactComponent as Meeting } from './svgs/meeting.svg';
 import { ReactComponent as People } from './svgs/people.svg';
 import { ReactComponent as Shapes } from './svgs/shapes.svg';
+
+import { ReactComponent as Myself } from './svgs/5.svg';
+import { ReactComponent as MyTeam } from './svgs/6.svg';
+import { ReactComponent as External } from './svgs/7.svg';
+import { ReactComponent as TheCompany } from './svgs/8.svg';
+
 import Home from './components/Home';
 import PhaseTwo from './components/PhaseTwo';
 
@@ -29,7 +35,7 @@ function App(props) {
     props.history.push('/phaseTwo');
   });
 
-  const timeout = useTimeout(callPush, 3000);
+  const timeout = useTimeout(callPush, 2000);
 
   const [isVisible, setIsVisible] = useState({
     '1': true,
@@ -105,6 +111,7 @@ function App(props) {
           <PhaseTwo>
             <main style={{ display: 'flex', padding: '16px' }}>
               <CircleWithLabel
+                fadeOutOpacity={true}
                 purpleBorder={true}
                 opacity30={true}
                 isVisible={isVisible['5']}
@@ -116,36 +123,40 @@ function App(props) {
               />
               <div style={{width:'60px'}}></div>
               <CircleWithLabel
+                fadein={true}
                 isVisible={isVisible['6']}
                 id={'2'}
                 handleSelect={e => handleSelect(e, '2')}
                 selectedItem={selectedItem === '2'}
-                icon={<Meeting />}
+                icon={<Myself />}
                 labelText={'MYSELF'}
               />
               <CircleWithLabel
+                fadein={true}
                 isVisible={isVisible['7']}
                 id={'3'}
                 handleSelect={e => handleSelect(e, '3')}
                 selectedItem={selectedItem === '3'}
-                icon={<People />}
+                icon={<MyTeam />}
                 labelText={'MY TEAM'}
               />
               <CircleWithLabel
+                fadein={true}
                 isVisible={isVisible['8']}
                 id={'4'}
                 handleSelect={e => handleSelect(e, '4')}
                 selectedItem={selectedItem === '4'}
-                icon={<Shapes />}
+                icon={<External />}
                 labelText={'EXTERNAL PARTNERS'}
               />
 
               <CircleWithLabel
+                fadein={true}
                 isVisible={isVisible['8']}
                 id={'4'}
                 handleSelect={e => handleSelect(e, '4')}
                 selectedItem={selectedItem === '4'}
-                icon={<Shapes />}
+                icon={<TheCompany />}
                 labelText={'THE COMPANY'}
               />
             </main>
